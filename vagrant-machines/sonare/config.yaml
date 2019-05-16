@@ -1,0 +1,16 @@
+---
+configs:
+        use: 'home'
+        office:
+                box_name: ' debian/stretch64'
+                ip_addr: '192.168.202.140'
+                script_path: './test.sh'
+        home:
+                box_name: ' debian/stretch64'
+                ip_addr: '192.168.202.140'
+                script_path: './test.sh'
+
+
+
+
+
