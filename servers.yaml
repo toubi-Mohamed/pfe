@@ -1,14 +1,9 @@
 ---
-- name: debian1
-  hostname: debian1
+- name: lamp-server
+  hostname: lamp-server
   box: debian/stretch64
-  ram: 512
-  ip: 172.17.8.101
+  ram: 800
+  ip: 192.168.81.128
   cpus: 1
-- name: debian2
-  hostname: debian2
-  box: debian/stretch64
-  ram: 512
-  ip: 172.17.8.102
-  cpus: 1
+
 
