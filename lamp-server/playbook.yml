@@ -29,3 +29,5 @@
     - include: tasks/drupal.yml
 
     - include: tasks/nginx.yml
+
+    - include: tasks/nodejs.yml
