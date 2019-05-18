@@ -15,7 +15,7 @@ servers = YAML.load_file('servers.yaml')
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
  
   #ensure that all Vagrant machine use the same key ssh
-  config.ssh.insert_key = false
+ # config.ssh.insert_key = false
 
   # Iterate through entries in YAML file
   servers.each do |servers|
