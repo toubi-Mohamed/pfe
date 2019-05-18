@@ -13,15 +13,19 @@ servers = YAML.load_file('servers.yaml')
 
 # Create boxes
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+ 
+  #ensure that all Vagrant machine use the same key ssh
+  config.ssh.insert_key = false
 
   # Iterate through entries in YAML file
   servers.each do |servers|
     config.vm.define servers["name"] do |srv|
     config.vm.hostname = servers["hostname"]
-      srv.vm.box = servers["box"]
-      srv.vm.network "public_network", ip: servers["ip"]
+      srv.vm.box = servers["box_name"]
+      srv.vm.network "private_network", ip: servers["ip"]
       srv.vm.provider :virtualbox do |vb|
         vb.name = servers["name"]
+        vb.gui = servers["gui"]
         vb.memory = servers["ram"]
         vb.cpus = servers["cpus"]
       end

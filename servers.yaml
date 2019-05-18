@@ -1,9 +1,44 @@
 ---
-- name: lamp-server
-  hostname: lamp-server
-  box: debian/stretch64
-  ram: 800
-  ip: 192.168.81.128
-  cpus: 1
+"ansible tower vagrant machine"
+- name: tower
+  hostname: tower.local
+  box_name: ansible/tower
+  ip: 192.168.56.2
+  gui: false
+  ram: 1024
+  cpus: 2
+"jenkins vagrant machine"
+- name: jenkins
+  hostname: jenkins.local
+  box_name: debian/stretch64
+  ip: 192.168.56.3
+  gui: false
+  ram: 1024
+  cpus: 2
+"sonar vagrant machine"
+- name: sonare
+  hostname: sonare.local
+  box_name: debian/stretch64
+  ip: 192.168.56.4
+  gui: false
+  ram: 1024
+  cpus: 2
+"nexus vagrant machine"
+- name: nexus
+  hostname: nexus.local
+  box_name: debian/stretch64
+  ip: 192.168.56.5
+  gui: false
+  ram: 1024
+  cpus: 2
+"pro vagrant machine"
+- name: prod
+  hostname: prod.local
+  box_name: debian/stretch64
+  ip: 192.168.56.6
+  gui: false
+  ram: 1024
+  cpus: 2
+
 
 
