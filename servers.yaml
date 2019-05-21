@@ -1,5 +1,5 @@
 ---
-"ansible tower vagrant machine"
+#ansible tower vagrant machine"
 - name: tower
   hostname: tower.local
   box_name: ansible/tower
@@ -7,7 +7,8 @@
   gui: false
   ram: 1024
   cpus: 2
-"jenkins vagrant machine"
+
+#jenkins vagrant machine"
 - name: jenkins
   hostname: jenkins.local
   box_name: debian/stretch64
@@ -15,7 +16,8 @@
   gui: false
   ram: 1024
   cpus: 2
-"sonar vagrant machine"
+
+#sonar vagrant machine"
 - name: sonare
   hostname: sonare.local
   box_name: debian/stretch64
@@ -23,7 +25,8 @@
   gui: false
   ram: 1024
   cpus: 2
-"nexus vagrant machine"
+
+#nexus vagrant machine"
 - name: nexus
   hostname: nexus.local
   box_name: debian/stretch64
@@ -31,7 +34,8 @@
   gui: false
   ram: 1024
   cpus: 2
-"pro vagrant machine"
+
+#pro vagrant machine"
 - name: prod
   hostname: prod.local
   box_name: debian/stretch64
