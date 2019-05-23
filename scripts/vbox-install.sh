@@ -1,10 +1,8 @@
 # Add VirtualBox PPA 
 sudo apt-add-repository 'deb http://download.virtualbox.org/virtualbox/debian stretch contrib'
 # Import Sign Key
-sudo curl -O https://www.virtualbox.org/download/oracle_vbox_2016.asc
-sudo curl -O https://www.virtualbox.org/download/oracle_vbox.asc
-sudo apt-key add oracle_vbox_2016.asc
-sudo apt-key add oracle_vbox.asc
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install -y virtualbox-6.0
 rm -r \
