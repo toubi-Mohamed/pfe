@@ -1,0 +1,12 @@
+---
+#ansible tower vagrant machine"
+- name: jenkins
+  hostname: jenkins.local
+  box_name: debian/stretch64
+  #ip: 192.168.100.1
+  #guest_port: 8080
+  #host-port: 8080
+  gui: false
+  ram: 512
+  cpus: 1
+

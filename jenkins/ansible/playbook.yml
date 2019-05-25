@@ -1,0 +1,9 @@
+---
+- hosts: jenkins
+  become: yes
+  roles:
+          - geerlingguy.jenkins
+          - tecris.maven
+            #- geerlingguy.ansible
+            #- geerlingguy.git
+
