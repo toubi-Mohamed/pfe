@@ -1,0 +1,24 @@
+---
+- name: Get software for apt repository management
+  apt: "name={{ item }} state=present"
+  with_items:
+    - python-apt
+    - python-pycurl
+
+- name: "Install Apache, MySQL, PHP and other dependencies"
+  apt: "name={{ item }} state=present"
+  with_items:
+    - apache2
+    - mysql-server
+    - php7.0
+    - php7.0-mysql
+    - git
+    - curl
+    - unzip
+    - sendmail
+
+- name: "Start Apache, MySQL and PHP"
+  service: "name={{ item }} state=started enabled=yes"
+  with_items:
+    - apache2
+    - mysql

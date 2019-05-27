@@ -4,6 +4,6 @@
   roles:
           - geerlingguy.jenkins
           - tecris.maven
-            #- geerlingguy.ansible
-            #- geerlingguy.git
+          - geerlingguy.ansible
+          - geerlingguy.git
 

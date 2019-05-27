@@ -1,0 +1,4 @@
+---
+- src: idealista.java_role
+  version: 4.1.0
+  name: java

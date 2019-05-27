@@ -1,2 +1,0 @@
-[lampserver]
-lamp-server ansible_host=172.17.8.101 ansible_port=2200

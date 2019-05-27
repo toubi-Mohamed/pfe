@@ -1,0 +1,13 @@
+---
+#ansible tower vagrant machine"
+- name: lamp-sercer
+  hostname: lamp-server.local
+  box_name: debian/stretch64
+  #ip: 192.168.100.1
+  #guest_port: 8081
+  #host_port: 8081
+  playbook_path: ansible/playbook.yml
+  gui: false
+  ram: 1024
+  cpus: 1
+

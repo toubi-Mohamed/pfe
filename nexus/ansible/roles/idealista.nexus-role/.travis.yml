@@ -1,0 +1,16 @@
+---
+language: python
+python: "3.6"
+sudo: required
+group: deprecated-2017Q4
+
+services:
+  - docker
+install:
+  - pip install pipenv==2018.11.26
+  - pipenv install -r test-requirements.txt
+script:
+  - pipenv run molecule test
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
