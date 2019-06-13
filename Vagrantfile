@@ -22,13 +22,17 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.define servers["name"] do |srv|
     config.vm.hostname = servers["hostname"]
       srv.vm.box = servers["box_name"]
-      srv.vm.network "private_network", ip: servers["ip"]
+      srv.vm.network "public_network", ip: servers["ip"], bridge: servers["bridge_interface"]
       srv.vm.provider :virtualbox do |vb|
         vb.name = servers["name"]
         vb.gui = servers["gui"]
         vb.memory = servers["ram"]
         vb.cpus = servers["cpus"]
       end
+     srv.vm.provision "ansible" do |ansible|
+      ansible.playbook = servers["playbook_path"]
+      ansible.become = true
+     end
     end
   end
 end
