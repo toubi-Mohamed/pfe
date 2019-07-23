@@ -10,4 +10,5 @@ add-apt-repository \
    $(lsb_release -cs) \
    stable"
 apt-get update
+apt-cache policy docker-ce
 apt-get install -y docker-ce
