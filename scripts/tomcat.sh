@@ -42,3 +42,10 @@ WantedBy=multi-user.target
 systemctl daemon-reload 
 systemctl start tomcat
 systemctl status tomcat 
+
+ systemctl enable tomcat
+ systemctl start tomcat
+ #configure tomcat web interface 
+ 
+ 
+ 
