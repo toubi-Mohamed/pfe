@@ -3,10 +3,12 @@ groupadd tomcat
 useradd -s /bin/false -g tomcat -d /opt/tomcat tomcat
 # install tomcat 
 cd /tmp
-apt install curl
+apt install -y curl
 curl -O https://www-eu.apache.org/dist/tomcat/tomcat-9/v9.0.22/bin/apache-tomcat-9.0.22.tar.gz
+mkdir /opt/tomcat
 tar xzvf apache-tomcat-9.0.22.tar.gz -C /opt/tomcat --strip-components=1
 #update permission 
+cd /opt/tomcat
 chgrp -R tomcat /opt/tomcat
 chmod -R g+r conf
 chmod g+x conf
