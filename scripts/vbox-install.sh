@@ -12,4 +12,8 @@ VBoxManage --version
 #apt-get install -y build-essential
 #apt-get install -y dkms
 #/etc/init.d/vboxdrv setup
+echo deb http://ftp.debian.org/debian stretch-backports main contrib > /etc/apt/sources.list.d/stretch-backports.list
+apt-get update 
+apt install virtualbox-guest-dkms virtualbox-guest-x11 linux-headers-$(uname -r)
+
 
