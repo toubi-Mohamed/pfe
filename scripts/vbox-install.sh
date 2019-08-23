@@ -15,5 +15,7 @@ VBoxManage --version
 echo deb http://ftp.debian.org/debian stretch-backports main contrib > /etc/apt/sources.list.d/stretch-backports.list
 apt-get update 
 apt install virtualbox-guest-dkms virtualbox-guest-x11 linux-headers-$(uname -r)
+#install vagrant plugin vbox guest
+vagrant plugin install vagrant-vbguest
 
 
