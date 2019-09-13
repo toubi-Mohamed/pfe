@@ -8,3 +8,6 @@ systemctl status mysqld
 grep 'temporary password' /var/log/mysqld.log
  mysql_secure_installation
  mysqladmin -u root -p version
+CREATE DATABASE myProject 
+CREATE USER 'myProject' IDENTIFIED BY 'pass'
+ CRANT ALL PRIV
