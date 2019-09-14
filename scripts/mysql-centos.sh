@@ -9,5 +9,6 @@ grep 'temporary password' /var/log/mysqld.log
  mysql_secure_installation
  mysqladmin -u root -p version
 CREATE DATABASE myProject 
-CREATE USER 'myProject' IDENTIFIED BY 'pass'
- CRANT ALL PRIV
+CREATE USER 'myProject'@'localhost' IDENTIFIED BY 'pass'
+CRANT ALL PRIVILEGES ON myProject.* TO 'myProject'@'localhost'
+FLUSH PRIVILEGES
