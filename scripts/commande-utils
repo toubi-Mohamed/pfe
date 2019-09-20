@@ -3,3 +3,4 @@ dpkg-query -l
 dpkg-query -f '${binary:Package}\n' -W > packages_list.txt
 xargs -a packages_list.txt apt install
 dpkg-query -f '${binary:Package}\n' -W | wc -l
+lsb_release -dc
