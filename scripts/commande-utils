@@ -1,0 +1,4 @@
+apt list --installed
+dpkg-query -l
+dpkg-query -f '${binary:Package}\n' -W > packages_list.txt
+xargs -a packages_list.txt apt install
