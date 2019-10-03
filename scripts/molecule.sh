@@ -12,3 +12,6 @@ python3 -m pip install molecule
 python3 -m pip install docker 
 #execute test in  role ansible
 molecule test 
+molecule converge
+molecule destroy 
+molecule verify 
