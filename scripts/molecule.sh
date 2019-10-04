@@ -15,3 +15,6 @@ molecule test
 molecule converge
 molecule destroy 
 molecule verify 
+# initial role ansible with molecule
+molecule init -r test.name -d docker 
+molecule init scenario 
